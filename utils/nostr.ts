@@ -1,8 +1,9 @@
 import "websocket-polyfill";
 
-import { SimplePool, nip05, nip19 } from "nostr-tools";
-
+import { DEFAULT_RELAYS } from "@/constants";
 import { bech32 } from "bech32";
+
+const { nip05, nip19, SimplePool } = require("nostr-tools");
 
 const pool = new SimplePool();
 type Filter = {
